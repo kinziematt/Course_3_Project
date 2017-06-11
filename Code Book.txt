@@ -1,0 +1,118 @@
+Feature Selection 
+=================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
+
+Each subject had multiple observations for each activity. The variables produced by the run_analyis.R script are as follows:
+
+ $ subject                        : int  1-30 denoting which subject performed the test
+ $ activity                       : Factor w/ 6 levels denoting the activity performed by the subject
+ $ tBodyAcc.mean...X              : num  mean of observations for that measurement
+ $ tBodyAcc.mean...Y              : num  mean of observations for that measurement
+ $ tBodyAcc.mean...Z              : num  mean of observations for that measurement
+ $ tBodyAcc.std...X               : num  mean of observations for that measurement
+ $ tBodyAcc.std...Y               : num  mean of observations for that measurement
+ $ tBodyAcc.std...Z               : num  mean of observations for that measurement
+ $ tGravityAcc.mean...X           : num  mean of observations for that measurement
+ $ tGravityAcc.mean...Y           : num  mean of observations for that measurement
+ $ tGravityAcc.mean...Z           : num  mean of observations for that measurement
+ $ tGravityAcc.std...X            : num  mean of observations for that measurement
+ $ tGravityAcc.std...Y            : num  mean of observations for that measurement
+ $ tGravityAcc.std...Z            : num  mean of observations for that measurement
+ $ tBodyAccJerk.mean...X          : num  mean of observations for that measurement
+ $ tBodyAccJerk.mean...Y          : num  mean of observations for that measurement
+ $ tBodyAccJerk.mean...Z          : num  mean of observations for that measurement
+ $ tBodyAccJerk.std...X           : num  mean of observations for that measurement
+ $ tBodyAccJerk.std...Y           : num  mean of observations for that measurement
+ $ tBodyAccJerk.std...Z           : num  mean of observations for that measurement
+ $ tBodyGyro.mean...X             : num  mean of observations for that measurement
+ $ tBodyGyro.mean...Y             : num  mean of observations for that measurement
+ $ tBodyGyro.mean...Z             : num  mean of observations for that measurement
+ $ tBodyGyro.std...X              : num  mean of observations for that measurement
+ $ tBodyGyro.std...Y              : num  mean of observations for that measurement
+ $ tBodyGyro.std...Z              : num  mean of observations for that measurement
+ $ tBodyGyroJerk.mean...X         : num  mean of observations for that measurement
+ $ tBodyGyroJerk.mean...Y         : num  mean of observations for that measurement
+ $ tBodyGyroJerk.mean...Z         : num  mean of observations for that measurement
+ $ tBodyGyroJerk.std...X          : num  mean of observations for that measurement
+ $ tBodyGyroJerk.std...Y          : num  mean of observations for that measurement
+ $ tBodyGyroJerk.std...Z          : num  mean of observations for that measurement
+ $ tBodyAccMag.mean..             : num  mean of observations for that measurement
+ $ tBodyAccMag.std..              : num  mean of observations for that measurement
+ $ tGravityAccMag.mean..          : num  mean of observations for that measurement
+ $ tGravityAccMag.std..           : num  mean of observations for that measurement
+ $ tBodyAccJerkMag.mean..         : num  mean of observations for that measurement
+ $ tBodyAccJerkMag.std..          : num  mean of observations for that measurement
+ $ tBodyGyroMag.mean..            : num  mean of observations for that measurement
+ $ tBodyGyroMag.std..             : num  mean of observations for that measurement
+ $ tBodyGyroJerkMag.mean..        : num  mean of observations for that measurement
+ $ tBodyGyroJerkMag.std..         : num  mean of observations for that measurement
+ $ fBodyAcc.mean...X              : num  mean of observations for that measurement
+ $ fBodyAcc.mean...Y              : num  mean of observations for that measurement
+ $ fBodyAcc.mean...Z              : num  mean of observations for that measurement
+ $ fBodyAcc.std...X               : num  mean of observations for that measurement
+ $ fBodyAcc.std...Y               : num  mean of observations for that measurement
+ $ fBodyAcc.std...Z               : num  mean of observations for that measurement
+ $ fBodyAcc.meanFreq...X          : num  mean of observations for that measurement
+ $ fBodyAcc.meanFreq...Y          : num  mean of observations for that measurement
+ $ fBodyAcc.meanFreq...Z          : num  mean of observations for that measurement
+ $ fBodyAccJerk.mean...X          : num  mean of observations for that measurement
+ $ fBodyAccJerk.mean...Y          : num  mean of observations for that measurement
+ $ fBodyAccJerk.mean...Z          : num  mean of observations for that measurement
+ $ fBodyAccJerk.std...X           : num  mean of observations for that measurement
+ $ fBodyAccJerk.std...Y           : num  mean of observations for that measurement
+ $ fBodyAccJerk.std...Z           : num  mean of observations for that measurement
+ $ fBodyAccJerk.meanFreq...X      : num  mean of observations for that measurement
+ $ fBodyAccJerk.meanFreq...Y      : num  mean of observations for that measurement
+ $ fBodyAccJerk.meanFreq...Z      : num  mean of observations for that measurement
+ $ fBodyGyro.mean...X             : num  mean of observations for that measurement
+ $ fBodyGyro.mean...Y             : num  mean of observations for that measurement
+ $ fBodyGyro.mean...Z             : num  mean of observations for that measurement
+ $ fBodyGyro.std...X              : num  mean of observations for that measurement
+ $ fBodyGyro.std...Y              : num  mean of observations for that measurement
+ $ fBodyGyro.std...Z              : num  mean of observations for that measurement
+ $ fBodyGyro.meanFreq...X         : num  mean of observations for that measurement
+ $ fBodyGyro.meanFreq...Y         : num  mean of observations for that measurement
+ $ fBodyGyro.meanFreq...Z         : num  mean of observations for that measurement
+ $ fBodyAccMag.mean..             : num  mean of observations for that measurement
+ $ fBodyAccMag.std..              : num  mean of observations for that measurement
+ $ fBodyAccMag.meanFreq..         : num  mean of observations for that measurement
+ $ fBodyBodyAccJerkMag.mean..     : num  mean of observations for that measurement
+ $ fBodyBodyAccJerkMag.std..      : num  mean of observations for that measurement
+ $ fBodyBodyAccJerkMag.meanFreq.. : num  mean of observations for that measurement
+ $ fBodyBodyGyroMag.mean..        : num  mean of observations for that measurement
+ $ fBodyBodyGyroMag.std..         : num  mean of observations for that measurement
+ $ fBodyBodyGyroMag.meanFreq..    : num  mean of observations for that measurement
+ $ fBodyBodyGyroJerkMag.mean..    : num  mean of observations for that measurement
+ $ fBodyBodyGyroJerkMag.std..     : num  mean of observations for that measurement
+ $ fBodyBodyGyroJerkMag.meanFreq..: num  mean of observations for that measurement
